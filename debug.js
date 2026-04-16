@@ -27,3 +27,20 @@ main().catch(err => {
   console.log("❌ Javob:", JSON.stringify(err.response?.data, null, 2));
   console.log("❌ Xato:", err.message);
 });
+
+const MOYSKLAD_API = "https://online.moysklad.ru/api/remap/1.2/entity/product";
+const token = "b95833e6e3d48074a273e1ef4bcf3bceb23bb7e8";
+
+async function getPriceMoysklad(price, book) {
+  try {
+    const res = await axios.get(`${MOYSKLAD_API}?filter=name=${book.name}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      timeout: 15000,
+    });
+  } catch (err) {
+    console.log("Moysklad narx olishda xato:", err.message);
+    return 0;
+  }
+}
