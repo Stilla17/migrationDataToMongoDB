@@ -1,0 +1,25 @@
+# Dependency-lar (juda og'ir va har doim qayta o'rnatish mumkin)
+node_modules/
+
+# Maxfiy ma'lumotlar (Kalitlar, bazaga ulanish parollari)
+.env
+
+# Log fayllar (Xatoliklar tarixi)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Operatsion tizim fayllari
+.DS_Store
+Thumbs.db
+
+# Yuklangan rasmlar/fayllar (Media)
+# Agar rasmlarni serverda saqlasangiz, ularni gitga qo'shmagan ma'qul
+public/uploads/
+src/uploads/
+
+# Build natijalari (Agar TypeScript ishlatsangiz yoki build qilsangiz)
+dist/
+build/
